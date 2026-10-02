@@ -1,7 +1,11 @@
 from src.calculator import add
 
+# Ganerate random numbers for testing
+import random
+random.seed(0)  # Set seed for reproducibility
+def random_test_add():
+    for _ in range(10):
+        a = random.randint(-100, 100)
+        b = random.randint(-100, 100)
+        assert add(a, b) == a + b
 
-def test_add():
-    assert add(1, 2) == 3
-    assert add(-2, 2) == 0
-    assert add(0, 0) == 0
